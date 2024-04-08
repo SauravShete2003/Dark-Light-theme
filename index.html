@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark-Light-Mode</title>
     <style>
+      body{
+        height: 95vh;
+      }
      .active{
         border: 2px solid black;
         border-radius: 10px;
@@ -13,13 +16,8 @@
       .mode-img{
         height: 30px;
         padding: 10px;
-        transition: 0.4;
         cursor:pointer; 
            
-      }
-      .mode-img:hover{
-        height: 33px;
-
       }
       .bg-light{
         background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234, 249, 249, 0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
@@ -45,26 +43,43 @@
         font-size: 20px;
         /* color: orangered; */
       }
-      .container{
+      .container{ 
         width: 700px;
         margin: 0 auto;
       }
       .img-container{
+        display:inline-block;
+      }
+      .heading{
         display: inline-block;
-        background-color: aqua;
-
+        margin-left: 390px;
+        
+      }
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 90%;
+        }
+        .heading {
+          margin-left: 0;
+          font-size: 17px;
+        }
+        .mode-img{
+          height: 20px;
+        }
       }
     </style>
 </head>
 <body id="body" class="body">
     <div class="img-container">
+    
     <img src="./light.png" onclick="lightMode()" class="mode-img active" id="light" >
 
-    <img src="./dark.png"onclick=" darkMode()" class="mode-img" id="dark">
+    <img src="./dark.png"onclick=" darkMode()" class="mode-img" 
+    id="dark">
+    <h2 class="heading">श्रीराम नवमीच्या शुभेच्छा!</h2>
   </div>
 
     <div class="container">
-        <h2 class="heading">श्रीराम नवमीच्या शुभेच्छा!</h2>
        <img src="img-ram.jpg" class="ram-img">
         
        <p class="text">चैत्र शुद्ध नवमी हा दिवस हिंदू पंचागानुसार अत्यंत महत्वाचा दिवस. हा दिवस आपण मोठ्या आनंदाने व उत्साहाने रामनवमी म्हणून साजरा करतो. या तिथीला भगवान विष्णूचा सातवा अवतार समजल्या जाणाऱ्या प्रभू रामचंद्राचा जन्म झाला होता. या दिवसाला ‘रामनवमी’ असे म्हणतात. यंदा ३० मार्च २०२३ रोजी रामनवमीचा उत्सव साजरा करण्यात येईल. ज्याप्रमाणे कृष्णाचा जन्म रात्री १२ वाजता झाला असे म्हणतात तसेच प्रभू रामाचा जन्म सूर्य डोक्यावर आल्यावर म्हणजेच दुपारी १२ वाजता झाला. </p>
