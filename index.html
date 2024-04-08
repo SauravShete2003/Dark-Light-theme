@@ -6,24 +6,24 @@
     <title>Dark-Light-Mode</title>
     <style>
      .active{
-        border: 2px solid red;
+        border: 2px solid black;
         border-radius: 10px;
       }
 
       .mode-img{
-        height: 50px;
+        height: 30px;
         padding: 10px;
-        transition: 0.3;  
+        transition: 0.4;
+        cursor:pointer; 
+           
       }
       .mode-img:hover{
-        cursor:pointer;
-        height: 55px;
+        height: 33px;
 
       }
       .bg-light{
         background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234, 249, 249, 0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
-        color: black;
-
+        color:orangered;
       }
       .bg-dark{
         background-color: rgb(68, 67, 67);
@@ -31,20 +31,43 @@
         color: white;
 
       }
+      .ram-img{
+        height: 300px;
+        width: 250px;
+        border-radius: 20px;
+        padding: 5px;
+        margin: 0 auto;
+       display: block;
+       justify-content:center;
+      }
+      .text{
+        text-align: center;
+        font-size: 20px;
+        /* color: orangered; */
+      }
+      .container{
+        width: 700px;
+        margin: 0 auto;
+      }
+      .img-container{
+        display: inline-block;
+        background-color: aqua;
 
+      }
     </style>
 </head>
-<body id="body">
+<body id="body" class="body">
+    <div class="img-container">
     <img src="./light.png" onclick="lightMode()" class="mode-img active" id="light" >
 
     <img src="./dark.png"onclick=" darkMode()" class="mode-img" id="dark">
+  </div>
 
-    <div>
-       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, harum. Maiores neque nostrum, consectetur ex quo itaque sunt mollitia suscipit saepe voluptatum odio excepturi inventore, unde similique! Autem, porro odio.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse, natus minus blanditiis, odit alias saepe soluta fugit nam rerum tenetur veniam enim exercitationem cum omnis nobis voluptatibus molestiae doloremque!LoremDolor, harum. Maiores neque nostrum, consectetur ex quo itaque sunt mollitia suscipit saepe voluptatum odio excepturi inventore, unde similique! Autem, porro odio.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse, natus minus blanditiis, odit alias saepe soluta fugit nam rerum tenetur veniam enim exercitationem cum omnis nobis voluptatibus molestiae doloremque!Lorem
-      </p>
+    <div class="container">
+        <h2 class="heading">श्रीराम नवमीच्या शुभेच्छा!</h2>
+       <img src="img-ram.jpg" class="ram-img">
+        
+       <p class="text">चैत्र शुद्ध नवमी हा दिवस हिंदू पंचागानुसार अत्यंत महत्वाचा दिवस. हा दिवस आपण मोठ्या आनंदाने व उत्साहाने रामनवमी म्हणून साजरा करतो. या तिथीला भगवान विष्णूचा सातवा अवतार समजल्या जाणाऱ्या प्रभू रामचंद्राचा जन्म झाला होता. या दिवसाला ‘रामनवमी’ असे म्हणतात. यंदा ३० मार्च २०२३ रोजी रामनवमीचा उत्सव साजरा करण्यात येईल. ज्याप्रमाणे कृष्णाचा जन्म रात्री १२ वाजता झाला असे म्हणतात तसेच प्रभू रामाचा जन्म सूर्य डोक्यावर आल्यावर म्हणजेच दुपारी १२ वाजता झाला. </p>
     </div>
     <script>
            function lightMode(){
