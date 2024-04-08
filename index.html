@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Light-Mode</title>
+    <style>
+     .active{
+        border: 2px solid red;
+        border-radius: 10px;
+      }
+
+      .mode-img{
+        height: 50px;
+        padding: 10px;
+        transition: 0.3;  
+      }
+      .mode-img:hover{
+        cursor:pointer;
+        height: 55px;
+
+      }
+      .bg-light{
+        background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234, 249, 249, 0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+        color: black;
+
+      }
+      .bg-dark{
+        background-color: rgb(68, 67, 67);
+        height: 95vh;
+        color: white;
+
+      }
+
+    </style>
+</head>
+<body id="body">
+    <img src="./light.png" onclick="lightMode()" class="mode-img active" id="light" >
+
+    <img src="./dark.png"onclick=" darkMode()" class="mode-img" id="dark">
+
+    <div>
+       <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, harum. Maiores neque nostrum, consectetur ex quo itaque sunt mollitia suscipit saepe voluptatum odio excepturi inventore, unde similique! Autem, porro odio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse, natus minus blanditiis, odit alias saepe soluta fugit nam rerum tenetur veniam enim exercitationem cum omnis nobis voluptatibus molestiae doloremque!LoremDolor, harum. Maiores neque nostrum, consectetur ex quo itaque sunt mollitia suscipit saepe voluptatum odio excepturi inventore, unde similique! Autem, porro odio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat esse, natus minus blanditiis, odit alias saepe soluta fugit nam rerum tenetur veniam enim exercitationem cum omnis nobis voluptatibus molestiae doloremque!Lorem
+      </p>
+    </div>
+    <script>
+           function lightMode(){
+            const light = document.getElementById("light");
+            light.classList.add("active");
+            const darkMode = document.getElementById("dark");
+            darkMode.classList.remove("active");
+            document.body.className = 'bg-light';
+        }
+
+        function darkMode(){
+            const dark = document.getElementById("dark");
+            dark.classList.add("active");
+            const lightMode = document.getElementById("light");
+            lightMode.classList.remove("active");
+            document.body.className = 'bg-dark';
+        }
+    </script>
+</body>
+</html>
